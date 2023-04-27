@@ -8,6 +8,7 @@ const INITIAL_SESSION = {
     message: [],
 }
 
+
 const bot = new Telegraf(config.get('TELEGRAM_TOKEN'))
 
 bot.use(session())
@@ -77,3 +78,23 @@ bot.launch()
 
 process.once('SIGINT', () => bot.stop('SIGINT'))
 process.once('SIGTERM', () => bot.stop('SIGTERM'))
+
+
+// Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+
+// // Your web app's Firebase configuration
+// const firebaseConfig = {
+//     apiKey: "AIzaSyD6-m2FlaNbZzriNq7E3f-jrYNkV8BsO3Q",
+//     authDomain: "tgbot-194cd.firebaseapp.com",
+//     databaseURL: "https://tgbot-194cd-default-rtdb.europe-west1.firebasedatabase.app",
+//     projectId: "tgbot-194cd",
+//     storageBucket: "tgbot-194cd.appspot.com",
+//     messagingSenderId: "809623213989",
+//     appId: "1:809623213989:web:047b750a2b4c86b8d1ba4c"
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
