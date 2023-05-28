@@ -66,7 +66,7 @@ bot.on(message('text'), async (ctx) => {
             role: openai.roles.ASSISTANT,
             content: response.content
         })
-        console.log(ctx.session.message);
+        // console.log(ctx.session.message);
         await ctx.reply(response.content)
     } catch (error) {
         console.log(`Error in bot.on message TEXT ${error}`);
